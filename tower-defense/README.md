@@ -1,12 +1,14 @@
 # Stickfront: Tower Defense store assets
 
-Screenshots, the feature graphic and the icons for the App Store and Google Play listings of
-Stickfront: Tower Defense, in English (`en`) and Turkish (`tr`). The layout follows
+Videos, screenshots, the feature graphic and the icons for the App Store and Google Play listings
+of Stickfront: Tower Defense, in English (`en`) and Turkish (`tr`). The layout follows
 [Stickfront's](../stickfront/README.md).
 
-Made on 2026-10-14 from the game at commit `5934b67` (version 0.6.0, chapters 1-3, Endless, the
-Maze). Every screenshot is the game's own screen, captured as the iOS app for the App Store and as
-the Android app for Google Play.
+- **Videos:** made on 2026-10-15 from the game at commit `ef7e653`: version 0.7.0, chapters 1-4 with
+  Winter, Endless, the Maze.
+- **Screenshots, feature graphic and icons:** made on 2026-10-14 from `5934b67` (0.6.0, chapters 1-3).
+- **Source:** everything is the game's own screen, captured as the iOS app for the App Store and as
+  the Android app for Google Play and social.
 
 ## What goes where
 
@@ -20,6 +22,10 @@ the Android app for Google Play.
 | Play Console → 7-inch and 10-inch tablet screenshots | the iPad set, `app-store/screenshots/ipad-13-2752x2064/<lang>/` | 2752x2064 (4:3) | up to 8 |
 | Play Console → Feature graphic | `google-play/feature-graphic-1024x500/<lang>/` | 1024x500 | 1 per language |
 | Play Console → App icon | `google-play/icon-512x512/` | 512x512 | 1 |
+| App Store Connect → iPhone → App Previews | `app-store/app-previews/iphone-1920x886/<lang>/` | 1920x886, 30 fps, 29 s | 1 per language |
+| App Store Connect → iPad → App Previews | `app-store/app-previews/ipad-1600x1200/<lang>/` | 1600x1200, 30 fps, 29 s | 1 per language |
+| Play Console → Store listing → Video (YouTube URL) | `google-play/promo-video/1920x1080/<lang>/` | 1920x1080, 60 fps, 30 s | 1 per language |
+| X, the website, anywhere outside the stores | `social/video/1920x1080/<lang>/` | 1920x1080, 60 fps, 30 s | full and `-small` copy |
 
 - **iPhone sets and Play:** the iPhone sets are about 2.17:1. Play allows the long side to be at
   most twice the short one, so Play phones get their own 16:9 set.
@@ -27,6 +33,31 @@ the Android app for Google Play.
 - **Images:** every PNG is opaque RGB, icons included.
 - **Platform names:** the App Store images and captions name no other platform or store (App Review
   2.3.10).
+
+## Videos
+
+- **App Store previews** (`app-store/app-previews/`):
+  - Only the iOS app's own screen: no title card, no logo, no text laid over it (App Review 2.3.4).
+  - Hard cuts on the music's beats: building, holding a wave on the volcano front, a branch choice,
+    Pilot Frost's paratroopers, Quill's Knight with its card, the Maze, the Blot flood, the thin ice
+    breaking on 4-2, the campaign's four chapters, the title.
+  - Encoding: H.264 High 4.0 at about 10 Mbps, 30 fps, 256 kbps stereo AAC, 29 s (Apple allows
+    15-30 s).
+- **Play promo** (`google-play/promo-video/`) and **social** (`social/video/`): Stickfront's promo style,
+  30 s.
+  - Content:
+    - the hook (tap a slot, build, hold the ink),
+    - the four counts (12 defenses, 24 branches, 8 heroes, 6 spells),
+    - an enemy roll call counting to 23 (+4 bosses),
+    - the four chapters with their bosses,
+    - the campaign's 24 maps, the Blot flood, the Maze, Endless and the daily siege.
+  - The Play cut has no store badge, no "free" and no call to action.
+  - The social cut adds "Free in the browser · tower-defense.stickwars.dev" on its end card.
+  - Play shows a YouTube link: upload the file to YouTube (public or unlisted, ads off, embedding
+    allowed), then paste the URL into the store listing.
+- **Mix:** all are at -14 LUFS, true peak at or under -1 dBTP.
+- **Counts:** from `STORE_COUNTS` at 0.7.0: 12 defenses, 24 branches, 8 heroes, 6 spells, 23
+  enemies, 4 bosses, 4 chapters, 24 campaign maps.
 
 ## Screenshots
 
@@ -61,11 +92,10 @@ Numbered in the suggested upload order. Google Play takes eight per device type:
 
 ## To come
 
-- **Chapters 4-6** (Winter, the Eraser, the Inkwell; 0.7-0.9): when they ship, add a few scenes and
-  update the counts in the captions above and in the images.
-- **Videos:** the Play and social promo (1920x1080) and an App Store preview made only of the app's
-  own screen recording (1920x886 for iPhone, 1600x1200 for iPad) are planned for when the game's v2
-  is done.
+- **Screenshots for chapters 4-6** (Winter, the Eraser, the Inkwell; 0.7-0.9): once the Eraser and
+  the Inkwell ship, a few scenes come in and the counts in the captions and the images are brought
+  up to date in one round.
+- **Videos for 0.8-0.9:** the same round adds their scenes to the videos.
 
 ## Remaking them
 
@@ -75,3 +105,8 @@ The capture and layout scripts are in `C:\Projeler\videos\td-store\tools`:
   on port 5199.
 - `td-compose.mjs`: the screenshots.
 - `td-feature.mjs`: the feature graphic.
+- `td-reel.mjs <play|iphone|ipad> <en|tr> <fps>`: records the video clips (`td-clips.mjs`) frame by
+  frame from the dev server, on the page's own clock. `td-capture-rest.sh` runs them all.
+- `td-build.mjs <en|tr> <play|social>` and `td-preview.mjs <en|tr> <iphone|ipad>`: write the
+  HyperFrames cut.
+- `td-render.sh`: renders all of them and finishes the sound.
