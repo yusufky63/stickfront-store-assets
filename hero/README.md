@@ -1,74 +1,101 @@
 # Stickfront: Hero store assets
 
-Screenshots, the feature graphic and the icons for the App Store and Google Play listings of
-Stickfront: Hero, in English (`en`) and Turkish (`tr`). Hero is played upright, so every
-screenshot is upright. The layout follows [Stickfront's](../stickfront/README.md).
+Videos, screenshots, the feature graphic and the icons for the App Store and Google Play listings
+of Stickfront: Hero, in English (`en`) and Turkish (`tr`). Hero is played upright. The layout
+follows [Stickfront's](../stickfront/README.md).
 
-- **Made:** 2026-10-15 from the game at commit `4033509` (origin/main, the S3 perks in).
-- **Source:** every screenshot is the game's own screen, captured as the iOS app for the App Store and
-  as the Android app for Google Play, with the phone's safe area (62 px top and 34 px bottom on
-  iPhone).
+- **Made:** 2026-10-15 from the game at commit `1ea382e`: version 0.6.0, with perks, elites, chests
+  and the treasure blot.
+- **Source:** everything is the game's own screen, captured as the iOS app for the App Store and as
+  the Android app for Google Play and social, with the phone's safe area (62 px top and 34 px bottom
+  on iPhone).
 
 ## What goes where
 
 | Store field | Folder | Size | Count |
 | --- | --- | --- | --- |
-| App Store Connect → iPhone 6.9" Display → Screenshots | `app-store/screenshots/iphone-6.9-1320x2868/<lang>/` | 1320x2868 | 9 per language |
-| App Store Connect → iPhone 6.3" Display → Screenshots | `app-store/screenshots/iphone-6.3-1206x2622/<lang>/` | 1206x2622 | 9 per language |
-| App Store Connect → iPad 13" Display → Screenshots | `app-store/screenshots/ipad-13-2064x2752/<lang>/` | 2064x2752 | 9 per language |
+| App Store Connect → iPhone 6.9" Display → Screenshots | `app-store/screenshots/iphone-6.9-1320x2868/<lang>/` | 1320x2868 | 10 per language |
+| App Store Connect → iPhone 6.3" Display → Screenshots | `app-store/screenshots/iphone-6.3-1206x2622/<lang>/` | 1206x2622 | 10 per language |
+| App Store Connect → iPad 13" Display → Screenshots | `app-store/screenshots/ipad-13-2064x2752/<lang>/` | 2064x2752 | 10 per language |
+| App Store Connect → iPhone → App Previews | `app-store/app-previews/iphone-886x1920/<lang>/` | 886x1920, 30 fps, 29 s | 1 per language |
+| App Store Connect → iPad → App Previews | `app-store/app-previews/ipad-1200x1600/<lang>/` | 1200x1600, 30 fps, 29 s | 1 per language |
 | App Store icon (comes from the build, for reference) | `app-store/icon-1024x1024/` | 1024x1024 | 1 |
-| Play Console → Phone screenshots | `google-play/screenshots/phone-1080x1920/<lang>/` | 1080x1920 | 9 per language (Play takes up to 8) |
+| Play Console → Phone screenshots | `google-play/screenshots/phone-1080x1920/<lang>/` | 1080x1920 | 10 per language (Play takes up to 8) |
 | Play Console → 7-inch and 10-inch tablet screenshots | the iPad set, `app-store/screenshots/ipad-13-2064x2752/<lang>/` | 2064x2752 (3:4) | up to 8 |
+| Play Console → Store listing → Video (YouTube URL) | `google-play/promo-video/1920x1080/<lang>/` | 1920x1080, 60 fps, 30 s | 1 per language |
 | Play Console → Feature graphic | `google-play/feature-graphic-1024x500/<lang>/` | 1024x500 | 1 per language |
 | Play Console → App icon | `google-play/icon-512x512/` | 512x512 | 1 |
+| X, the website, anywhere outside the stores | `social/video/1920x1080/<lang>/` | 1920x1080, 60 fps, 30 s | full and `-small` copy |
 
 - **iPhone sets and Play:** the iPhone sets are about 1:2.17. Play allows the long side to be at most
   twice the short one, so Play phones get their own 9:16 set.
 - **Images:** every PNG is opaque RGB, icons included.
-- **Platform names:** the App Store images and captions name no other platform or store (App Review
-  2.3.10).
+- **Platform names:** the App Store images, videos and captions name no other platform or store (App
+  Review 2.3.10).
+
+## Videos
+
+- **App Store previews** (`app-store/app-previews/`):
+  - Upright, only the iOS app's own screen: no title card, no logo, no text laid over it (App Review
+    2.3.4).
+  - Hard cuts on the music's beats: walking out, a crowd, an elite, an elite chest, a perk taken, a
+    Legendary card taken, Ink rain, Crimson's tank, the giant blot, a desert camp, the heroes, the
+    title.
+  - Encoding: H.264 High 4.0 at about 10 Mbps, 30 fps, 256 kbps stereo AAC, 29 s (Apple allows
+    15-30 s).
+- **Play promo** (`google-play/promo-video/`) and **social** (`social/video/`):
+  - The format is 16:9, because Play shows the promo in YouTube's wide player and X plays it as it
+    is. The upright game runs in a column in the middle, with Stickfront's promo type on the paper
+    either side.
+  - Content: 30 s with:
+    - the hook (move to aim, pick your cards, hold the ink),
+    - the four counts (14 weapons, 30 perks, 12 elite traits, 2 evolutions),
+    - the three maps,
+    - Crimson's tank, the chests, the heroes and Headquarters,
+    - the modes (maps, daily run, endless).
+  - The Play cut has no store badge, no "free" and no call to action.
+  - The social cut adds "Free in the browser · hero.stickwars.dev" on its end card.
+  - Play shows a YouTube link: upload the file to YouTube (public or unlisted, ads off, embedding
+    allowed), then paste the URL into the store listing.
+- **Mix:** all are at -14 LUFS, true peak at or under -1 dBTP.
 
 ## Screenshots
 
-Numbered in the suggested upload order; the scenes and captions are Hero's own list
-(`docs/ios-yayin.md` §10). Google Play takes eight per device type: upload 01-08.
+Numbered in the suggested upload order; the scenes and captions follow Hero's own list
+(`docs/ios-yayin.md` §10), with the 0.6.0 scenes in. Google Play takes eight per device type: upload
+01-08.
 
 | # | File | English | Turkish |
 | --- | --- | --- | --- |
 | 01 | `01-crowd.png` | Hold the Page Against the Ink. Walk, aim by moving, and let your weapons fire. | Mürekkebe karşı sayfayı tut. Yürü, hareketinle nişan al, silahların ateş etsin. |
-| 02 | `02-cards.png` | A Card at Every Level. Pick a weapon, a power or a rare upgrade. | Her seviyede bir kart. Bir silah, bir güç ya da nadir bir yükseltme seç. |
-| 03 | `03-evolved.png` | Evolve Your Weapons. Bring two cards together into something bigger. | Silahlarını evrimleştir. İki kartı birleştir, daha büyüğünü al. |
-| 04 | `04-tank.png` | Outrun Crimson's Tank. Watch where its shells will fall. | Kızıl'ın tankından kaç. Mermilerinin düşeceği yere dikkat et. |
-| 05 | `05-boss.png` | Climb to the Giant Blot. The forest's trail ends in its clearing. | Dev lekeye tırman. Orman yolu onun açıklığında biter. |
-| 06 | `06-camp.png` | Raid Crimson's Camps. Beat the guards, take the strongbox. | Kızıl'ın kamplarını bas. Muhafızları yen, kasayı al. |
-| 07 | `07-heroes.png` | 5 Commanders, 5 Companions. Each starts with its own weapon. | 5 komutan, 5 yoldaş. Her biri kendi silahıyla başlar. |
-| 08 | `08-hq.png` | Spend Your Gold at Headquarters. Upgrades that stay from run to run. | Altınını Karargâh'ta harca. Koşudan koşuya kalan geliştirmeler. |
-| 09 | `09-title.png` | 3 Tiers on Every Map. Village, Forest and Desert. | Her haritada 3 kademe. Köy, Orman ve Çöl. |
+| 02 | `02-elite.png` | Elites With 12 Traits. Shielded, molten, splitting and more. | 12 nitelikli elitler. Kalkanlı, ateşli, bölünen ve fazlası. |
+| 03 | `03-chest.png` | Open Their Chests. Elites, camps and bosses leave cards and perks. | Sandıklarını aç. Elitler, kamplar ve patronlar kart ve perk bırakır. |
+| 04 | `04-perks.png` | 30 Perks. Every fifth level, a perk changes how the run plays. | 30 perk. Her 5. seviyede bir perk koşunun oynanışını değiştirir. |
+| 05 | `05-cards.png` | A Card at Every Level. Pick a weapon, a power or a rare upgrade. | Her seviyede bir kart. Bir silah, bir güç ya da nadir bir yükseltme seç. |
+| 06 | `06-evolved.png` | Evolve Your Weapons. Bring two cards together into something bigger. | Silahlarını evrimleştir. İki kartı birleştir, daha büyüğünü al. |
+| 07 | `07-tank.png` | Outrun Crimson's Tank. Watch where its shells will fall. | Kızıl'ın tankından kaç. Mermilerinin düşeceği yere dikkat et. |
+| 08 | `08-boss.png` | Climb to the Giant Blot. The forest's trail ends in its clearing. | Dev lekeye tırman. Orman yolu onun açıklığında biter. |
+| 09 | `09-camp.png` | Raid Crimson's Camps. Beat the guards, take the strongbox. | Kızıl'ın kamplarını bas. Muhafızları yen, kasayı al. |
+| 10 | `10-heroes.png` | 5 Commanders, 5 Companions. Each starts with its own weapon. | 5 komutan, 5 yoldaş. Her biri kendi silahıyla başlar. |
 
-- **Counts:** from the game's code (`src/content/store.ts`, `STORE_COUNTS` at `4033509`): 5 heroes, 5
-  companions, 3 maps, 3 tiers.
+- **Counts:** from the game's code (`src/content/store.ts`, `STORE_COUNTS` at `1ea382e`):
+  - 14 weapons, 2 evolutions, 30 perks, 12 elite traits,
+  - 5 heroes, 5 companions,
+  - 3 maps with 3 tiers each.
 - **Feature graphic:** its line is the App Store subtitle from the same file.
-- **Runs:** they open with the game's dev hook `?run=<map>&seed=<n>&ahead=<seconds>`. The balance bot
-  plays the run that far, with a seasoned player's Headquarters upgrades. Staged parts:
-  - 02: the level's own cards are rolled by the game until a Legendary comes up.
-  - 03: the bow is set at its top step with the inkwell power, then the evolution card the game
+- **Runs:** they open with the game's dev hook `?run=<map>&seed=<n>`. The balance bot plays the run
+  with a seasoned player's Headquarters upgrades, until the moment the scene needs: a time, an elite
+  close by, a chest opened, Crimson's tank or the giant blot out. When the bot falls on the way,
+  another seed is tried.
+- **Staged parts:**
+  - 04 and 05: the game's own perk offer, and the level's own cards rolled until a Legendary comes
+    up.
+  - 06: the bow is set at its top step with the inkwell power, then the evolution card the game
     offers (Ink rain) is taken.
-  - 04 and 06: Graphite is moved up to Crimson's tank and to the first desert camp.
-  - 05: the bot climbs the forest's trail until the giant blot is out (another seed when it falls
-    on the way), then Graphite stands before it.
-- **iPad:** the game's own layout on a 3:4 screen puts the run in a centered upright column (its
-  stylesheet's `min-aspect-ratio: 3/4` rule takes the iPad 13" upright screen too). The iPad set
-  shows the app as it is.
-- **Left out:** the end of a run with a new best (scene 9 in Hero's list is optional).
-
-## To come
-
-- **After 0.6.0 (S4):** a perk choice or an elite and its chest takes the place of a scene, and the
-  counts are brought up to date.
-- **Videos for 0.6.0:**
-  - Play and social promo, 1920x1080.
-  - App Store previews made only of the app's own screen recording: 886x1920 for iPhone, 1200x1600
-    for iPad.
+  - 07, 08 and 09: Graphite is moved up to Crimson's tank, the giant blot and the first desert camp.
+- **iPad:** since 0.6.0 the run fills the whole iPad screen (the column rule now starts at 751/1000).
+- **Left out:** the end of a run with a new best, Headquarters and the title screen; the promo shows
+  Headquarters and the title.
 
 ## Remaking them
 
@@ -77,3 +104,8 @@ The scripts are in `C:\Projeler\videos\hero-store\tools`, against a dev server o
 - `hero-capture.mjs <iphone|ipad|play> <en|tr>`: takes the raw screens.
 - `hero-compose.mjs`: the screenshots.
 - `hero-feature.mjs`: the feature graphic.
+- `hero-reel.mjs <promo|iphone|ipad> <en|tr> <fps>`: records the video clips (`hero-clips.mjs`)
+  frame by frame, on the page's own clock.
+- `hero-build.mjs <en|tr> <play|social>` and `hero-preview.mjs <en|tr> <iphone|ipad>`: write the
+  HyperFrames cut.
+- `hero-video.sh [capture|render|all]`: records, renders and finishes all of them.

@@ -13,7 +13,7 @@ Each folder also has a README saying which file goes into which store field.
 | --- | --- | --- |
 | Stickfront: Land, Sea and Air | [`stickfront/`](stickfront/README.md) | Videos (App Store preview, Play promo, social), screenshots for iPhone 6.9" and 6.3", iPad 13", Play phone and tablet, the feature graphic, icons, logos |
 | Stickfront: Tower Defense | [`tower-defense/`](tower-defense/README.md) | Videos (App Store previews for iPhone and iPad, Play promo, social), screenshots for iPhone 6.9" and 6.3", iPad 13" (also Play tablets) and Play phone, the feature graphic, icons |
-| Stickfront: Hero | [`hero/`](hero/README.md) | Upright screenshots for iPhone 6.9" and 6.3", iPad 13" (also Play tablets) and Play phone, the feature graphic, icons; videos with 0.6.0 |
+| Stickfront: Hero | [`hero/`](hero/README.md) | Videos (upright App Store previews for iPhone and iPad, Play promo, social), upright screenshots for iPhone 6.9" and 6.3", iPad 13" (also Play tablets) and Play phone, the feature graphic, icons |
 
 ## Rules every set follows
 
