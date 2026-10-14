@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108">
+  <!-- Same figure and placement as android/.../drawable/ic_launcher_foreground.xml, on the paper background. -->
+  <rect width="108" height="108" fill="#ffffff"/>
+  <g transform="translate(11.925 14.5125) scale(0.45)" fill="none" stroke="#111111" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="80" cy="40" r="12" fill="#111111" stroke="none"/>
+    <path d="M80 52 V96 M80 96 L66 146 M80 96 L96 146 M80 62 L100 52 M80 62 L66 78" stroke-width="9"/>
+    <path d="M103 48 L128 28" stroke-width="6"/>
+    <path d="M96 43 L110 53" stroke-width="5"/>
+    <path d="M69 36 H91 M69 36 L59 42 M69 36 L60 31" stroke="#1D4ED8" stroke-width="6"/>
+  </g>
+</svg>
