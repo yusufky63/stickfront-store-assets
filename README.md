@@ -22,7 +22,7 @@ shell). All footage is the game's own screen and renderer. Nothing is mocked up.
 | X, the website, anywhere outside the stores | `social/video/1920x1080/<lang>/` | 1920x1080, 60 fps, 30 s | full and `-small` copy |
 | Play Console → Store listing → App icon | `google-play/icon-512x512/` | 512x512 | 1 |
 | App Store icon (comes from the build, for reference) | `app-store/icon-1024x1024/` | 1024x1024 | 1 |
-| Logos for posts, pages and press | `brand/` | wordmark and icon lockup, transparent PNG; icon SVG | 5 |
+| Logos for posts, pages and press | `brand/` | wordmark and icon lockup, transparent PNG; app icon SVG | 5 |
 
 App Store Connect holds each language in its own localization: upload `en` under English and `tr`
 under Turkish. In Play Console, add Turkish as a translation of the store listing and give it the
@@ -98,7 +98,9 @@ takes all ten. Google Play takes eight per device type: upload 01-08.
     transparent. Use black on light backgrounds and white on dark ones.
   - `stickfront-lockup-black.png` and `-white.png`: the app icon and the wordmark side by side,
     transparent.
-  - `stickfront-icon.svg`: the icon as a vector, from `mobile/assets/icon.svg`.
+  - `stickfront-icon.svg`: the app icon as a vector (the two duelists, blue and red bands, grey
+    ground), traced from the 1024 px app icon; drawn at 1024 it matches the PNG to within the edge
+    antialiasing. The game repo's own `mobile/assets/icon.svg` is the older one-figure drawing.
 - **Wordmark lettering:** Space Grotesk Bold (the game's own font), with the dot over the i drawn in
   #1D4ED8, the game's blue. It is the same wordmark as on the feature graphic.
 
