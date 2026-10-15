@@ -4,8 +4,8 @@ Videos, screenshots, the feature graphic and the icons for the App Store and Goo
 of Stickfront: Hero, in English (`en`) and Turkish (`tr`). Hero is played upright. The layout
 follows [Stickfront's](../stickfront/README.md).
 
-- **Made:** 2026-10-15 from the game at commit `1ea382e`: version 0.6.0, with perks, elites, chests
-  and the treasure blot.
+- **Made:** 2026-10-16 from the game at commit `d67c3b0`: version 0.8.0, with 12 maps in 4 regions
+  (the Countryside, the Desert, the Mist and the Volcano), perks, elites and chests.
 - **Source:** everything is the game's own screen, captured as the iOS app for the App Store and as
   the Android app for Google Play and social, with the phone's safe area (62 px top and 34 px bottom
   on iPhone).
@@ -38,9 +38,9 @@ follows [Stickfront's](../stickfront/README.md).
 - **App Store previews** (`app-store/app-previews/`):
   - Upright, only the iOS app's own screen: no title card, no logo, no text laid over it (App Review
     2.3.4).
-  - Hard cuts on the music's beats: walking out, a crowd, an elite, an elite chest, a perk taken, a
-    Legendary card taken, Ink rain, Crimson's tank, the giant blot, a desert camp, the heroes, the
-    title.
+  - Hard cuts on the music's beats: walking out, a crowd, the Caldera's lava closing in, the Misty
+    Swamp, an elite, an elite chest, a perk taken, Ink rain, Crimson's tank, the giant blot, the
+    heroes, the title.
   - Encoding: H.264 High 4.0 at about 10 Mbps, 30 fps, 256 kbps stereo AAC, 29 s (Apple allows
     15-30 s).
 - **Play promo** (`google-play/promo-video/`) and **social** (`social/video/`):
@@ -49,8 +49,9 @@ follows [Stickfront's](../stickfront/README.md).
     either side.
   - Content: 30 s with:
     - the hook (move to aim, pick your cards, hold the ink),
-    - the four counts (14 weapons, 30 perks, 12 elite traits, 2 evolutions),
-    - the three maps,
+    - the four counts (14 weapons, 30 perks, 18 kinds of blot, 11 bosses),
+    - 12 maps in 4 regions, one shot for each: the Countryside, the Desert, the Mist (the Misty
+      Swamp) and the Volcano (the Caldera),
     - Crimson's tank, the chests, the heroes and Headquarters,
     - the modes (maps, daily run, endless).
   - The Play cut has no store badge, no "free" and no call to action.
@@ -62,26 +63,28 @@ follows [Stickfront's](../stickfront/README.md).
 ## Screenshots
 
 Numbered in the suggested upload order; the scenes and captions follow Hero's own list
-(`docs/ios-yayin.md` §10), with the 0.6.0 scenes in. Google Play takes eight per device type: upload
-01-08.
+(`docs/ios-yayin.md` §10), with the 0.6.0 and 0.8.0 scenes in. Google Play takes eight per device
+type: upload 01-08.
 
 | # | File | English | Turkish |
 | --- | --- | --- | --- |
 | 01 | `01-crowd.png` | Hold the Page Against the Ink. Walk, aim by moving, and let your weapons fire. | Mürekkebe karşı sayfayı tut. Yürü, hareketinle nişan al, silahların ateş etsin. |
-| 02 | `02-elite.png` | Elites With 12 Traits. Shielded, molten, splitting and more. | 12 nitelikli elitler. Kalkanlı, ateşli, bölünen ve fazlası. |
-| 03 | `03-chest.png` | Open Their Chests. Elites, camps and bosses leave cards and perks. | Sandıklarını aç. Elitler, kamplar ve patronlar kart ve perk bırakır. |
-| 04 | `04-perks.png` | 30 Perks. Every fifth level, a perk changes how the run plays. | 30 perk. Her 5. seviyede bir perk koşunun oynanışını değiştirir. |
-| 05 | `05-cards.png` | A Card at Every Level. Pick a weapon, a power or a rare upgrade. | Her seviyede bir kart. Bir silah, bir güç ya da nadir bir yükseltme seç. |
-| 06 | `06-evolved.png` | Evolve Your Weapons. Bring two cards together into something bigger. | Silahlarını evrimleştir. İki kartı birleştir, daha büyüğünü al. |
-| 07 | `07-tank.png` | Outrun Crimson's Tank. Watch where its shells will fall. | Kızıl'ın tankından kaç. Mermilerinin düşeceği yere dikkat et. |
-| 08 | `08-boss.png` | Climb to the Giant Blot. The forest's trail ends in its clearing. | Dev lekeye tırman. Orman yolu onun açıklığında biter. |
-| 09 | `09-camp.png` | Raid Crimson's Camps. Beat the guards, take the strongbox. | Kızıl'ın kamplarını bas. Muhafızları yen, kasayı al. |
+| 02 | `02-caldera.png` | 12 Maps in 4 Regions. Up to the Volcano, where the lava closes in. | 4 bölgede 12 harita. Lavın daraldığı Volkan'a kadar. |
+| 03 | `03-swamp.png` | Into the Mist. Fog, poison bogs and the bog spirit. | Sise gir. Sis, zehirli bataklık ve Bataklık Ruhu. |
+| 04 | `04-elite.png` | Elites With 12 Traits. Shielded, molten, splitting and more. | 12 nitelikli elitler. Kalkanlı, ateşli, bölünen ve fazlası. |
+| 05 | `05-chest.png` | Open Their Chests. Elites, camps and bosses leave cards and perks. | Sandıklarını aç. Elitler, kamplar ve patronlar kart ve perk bırakır. |
+| 06 | `06-perks.png` | 30 Perks. Every fifth level, a perk changes how the run plays. | 30 perk. Her 5. seviyede bir perk koşunun oynanışını değiştirir. |
+| 07 | `07-evolved.png` | Evolve Your Weapons. 14 weapons, and two cards that come together into something bigger. | Silahlarını evrimleştir. 14 silah ve birleşip daha büyüğüne dönüşen iki kart. |
+| 08 | `08-tank.png` | Outrun Crimson's Tank. Watch where its shells will fall. | Kızıl'ın tankından kaç. Mermilerinin düşeceği yere dikkat et. |
+| 09 | `09-boss.png` | 11 Bosses. From the giant blot to the ember rider. | 11 patron. Dev lekeden Kor Atlı'ya. |
 | 10 | `10-heroes.png` | 5 Commanders, 5 Companions. Each starts with its own weapon. | 5 komutan, 5 yoldaş. Her biri kendi silahıyla başlar. |
 
-- **Counts:** from the game's code (`src/content/store.ts`, `STORE_COUNTS` at `1ea382e`):
+- **Counts:** from the game's store text (`docs/ios-yayin.md` §9, `src/content/store.ts`
+  `STORE_COUNTS` at `d67c3b0`):
+  - 12 maps in 4 regions, 3 tiers each,
   - 14 weapons, 2 evolutions, 30 perks, 12 elite traits,
-  - 5 heroes, 5 companions,
-  - 3 maps with 3 tiers each.
+  - 18 kinds of blot, 11 bosses,
+  - 5 heroes, 5 companions.
 - **Feature graphic:** its line is the App Store subtitle from the same file.
 - **Runs:** they open with the game's dev hook `?run=<map>&seed=<n>`. The balance bot plays the run
   with a seasoned player's Headquarters upgrades, until the moment the scene needs: a time, an elite
@@ -92,10 +95,11 @@ Numbered in the suggested upload order; the scenes and captions follow Hero's ow
     up.
   - 06: the bow is set at its top step with the inkwell power, then the evolution card the game
     offers (Ink rain) is taken.
-  - 07, 08 and 09: Graphite is moved up to Crimson's tank, the giant blot and the first desert camp.
+  - 02, 08 and 09: Graphite is moved up to the Caldera's north-west lava pool (a few seconds before
+    the shot, so the swarm catches up), Crimson's tank and the giant blot.
 - **iPad:** since 0.6.0 the run fills the whole iPad screen (the column rule now starts at 751/1000).
-- **Left out:** the end of a run with a new best, Headquarters and the title screen; the promo shows
-  Headquarters and the title.
+- **Left out:** the level cards with a Legendary, the desert camp, Headquarters, the end of a run and
+  the title screen; the promo shows the camp, Headquarters and the title.
 
 ## Remaking them
 
